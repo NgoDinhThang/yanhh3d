@@ -1,0 +1,191 @@
+/* HHPanda Theme Colors */
+:root {
+  --hhpanda-primary: #FFD875;
+  --hhpanda-dark-bg: #0F1419;
+  --hhpanda-card-bg: #14161E;
+  --hhpanda-hover-bg: #2A2A3A;
+  --hhpanda-text-primary: #FFFFFF;
+  --hhpanda-text-secondary: #CCCCCC;
+  --hhpanda-text-tertiary: #999999;
+  --hhpanda-border-color: #2A2A3A;
+  --hhpanda-success-color: #2CA35D;
+  --hhpanda-warning-color: #5E6070;
+}
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--hhpanda-dark-bg);
+  color: var(--hhpanda-text-primary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--hhpanda-dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--hhpanda-hover-bg);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hhpanda-primary);
+}
+
+/* Buttons */
+.btn-hhpanda {
+  background: var(--hhpanda-primary);
+  color: #000000;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-hhpanda:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--hhpanda-card-bg);
+  color: var(--hhpanda-text-secondary);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid var(--hhpanda-border-color);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--hhpanda-hover-bg);
+  border-color: var(--hhpanda-primary);
+}
+
+/* Cards */
+.card-hhpanda {
+  background: var(--hhpanda-card-bg);
+  border: 1px solid var(--hhpanda-border-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.card-hhpanda:hover {
+  background: var(--hhpanda-hover-bg);
+  border-color: var(--hhpanda-primary);
+}
+
+/* Typography */
+.text-hhpanda-primary {
+  color: var(--hhpanda-primary);
+  font-weight: 600;
+}
+
+.text-hhpanda-secondary {
+  color: var(--hhpanda-text-secondary);
+}
+
+.text-hhpanda-tertiary {
+  color: var(--hhpanda-text-tertiary);
+}
+
+/* Badges */
+.badge-quality {
+  display: inline-block;
+  background: var(--hhpanda-warning-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.badge-episodes {
+  display: inline-block;
+  background: var(--hhpanda-success-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+}
+
+/* Pagination */
+.pagination-hhpanda {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-hhpanda button {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  background: var(--hhpanda-card-bg);
+  color: var(--hhpanda-text-secondary);
+  border: 1px solid var(--hhpanda-border-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-hhpanda button:hover:not(:disabled) {
+  background: var(--hhpanda-hover-bg);
+  border-color: var(--hhpanda-primary);
+}
+
+.pagination-hhpanda button.active {
+  background: var(--hhpanda-primary);
+  color: #000000;
+  font-weight: 600;
+}
+
+.pagination-hhpanda button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Movie Grid */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.75rem;
+  }
+}
+
+/* Loading Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}

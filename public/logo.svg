@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 260 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD875;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFF1CC;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9D4EDD;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C77DFF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 3D Cube Background -->
+  <g opacity="0.7">
+    <!-- Left face (dark) -->
+    <polygon points="5,12 15,8 15,28 5,32" fill="#14161E"/>
+    <!-- Right face (lighter) -->
+    <polygon points="15,8 28,12 28,32 15,28" fill="#2A2A3A"/>
+    <!-- Top face (gold) -->
+    <polygon points="5,12 15,8 28,12 18,16" fill="url(#goldGradient)" opacity="0.6"/>
+  </g>
+  
+  <!-- Main text "Yanhh3d" -->
+  <g>
+    <!-- "Yanhh" in gold -->
+    <text x="40" y="45" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="bold" fill="url(#goldGradient)" letter-spacing="1">
+      Yanhh
+    </text>
+    <!-- "3d" in purple -->
+    <text x="208" y="47" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="900" fill="url(#purpleGradient)" letter-spacing="0">
+      3d
+    </text>
+  </g>
+  
+  <!-- Decorative element - film strip -->
+  <g transform="translate(245, 28)" opacity="0.8">
+    <!-- Play button -->
+    <circle cx="0" cy="0" r="7" fill="none" stroke="url(#goldGradient)" stroke-width="1"/>
+    <polygon points="-2,-4 -2,4 4,0" fill="url(#goldGradient)" opacity="0.8"/>
+  </g>
+  
+  <!-- Bottom accent line -->
+  <line x1="40" y1="52" x2="235" y2="52" stroke="url(#goldGradient)" stroke-width="1" opacity="0.5"/>
+</svg>
